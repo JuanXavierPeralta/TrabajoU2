@@ -28,9 +28,9 @@ public class TrabajoU2 {
         var mascota1=new Mascota(" Cholo "," pequeño"," pastor aleman ",5.0,mauricio);
          
         var uno= new Atencion(LocalDate.of(2022, Month.NOVEMBER, 7)," Dr.Jose ",20.5,mascota1,3);
-        uno.nuevaReceta(" ciclofosfamida", 2, " tomar cada 8 horas ", 0);
-        uno.nuevaReceta(" tetraciclina", 4, " tomar cada 12 horas ", 2);
-        uno.nuevaReceta("  tobramicina", 1, " tomar uno vez al dia ", 1);
+        uno.nuevaReceta(" Cloroformo", 2, " tomar cada 9 horas ", 0);
+        uno.nuevaReceta(" Finalin", 4, " tomar cada 4 horas ", 2);
+        uno.nuevaReceta(" Viagra", 1, " tomar uno vez al dia ", 1);
          
         System.out.println(mauricio.toString()); 
         System.out.println(mascota1.toString());

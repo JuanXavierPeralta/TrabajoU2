@@ -88,7 +88,7 @@ public class Owner {
                 + ", nombre=" + nombre 
                 + ", cantidadTelefonos=" + cantidadTelefonos 
                 + ", telefonoList=");
-        
+        }
         
         
         
