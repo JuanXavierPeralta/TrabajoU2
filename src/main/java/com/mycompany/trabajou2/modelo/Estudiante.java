@@ -10,4 +10,49 @@ package com.mycompany.trabajou2.modelo;
  */
 public class Estudiante {
     
+    
+    
+    private String cedula;
+    private String nombre;
+
+    
+    
+    
+    public Estudiante(String cedula, String nombre) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+    }
+
+    
+    
+    
+    public String getCedula() {
+        return cedula;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    
+    
+    
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
+    
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    
+    
+    
+    @Override
+    public String toString() {
+        return "Estudiante{" + "cedula=" + cedula 
+                + ", nombre=" + nombre + "\n"+'}';
+    }
 }
