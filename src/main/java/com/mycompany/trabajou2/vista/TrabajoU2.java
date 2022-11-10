@@ -8,29 +8,36 @@ package com.mycompany.trabajou2.vista;
 import com.mycompany.trabajou2.modelo.Atencion;
 import com.mycompany.trabajou2.modelo.Mascota;
 import com.mycompany.trabajou2.modelo.Dueño;
-
+import com.mycompany.trabajou2.modelo.Carrera;
+import com.mycompany.trabajou2.modelo.Estudiante;
 /**
  *
  * @author Portal Center
  */
 public class TrabajoU2 {
-    public static void main(String[] args) {
-       
-        var mauricio = new Dueño("0103617254","Mauricio Ortiz");
-        mauricio.nuevoTelefono("0984347604", 0, "Móvil", "tuenti");
+         var mauricio = new Dueño("0103667754","Mauricio Ortiz");
+        mauricio.nuevoTelefono("0984357604", 0, "Móvil", "tuenti");
         mauricio.nuevoTelefono("074078385",2,"Casa","Etapa");
         mauricio.nuevoTelefono("074135250",1287,"Fijo IP","Etapa");
         
-        var mascot = new Mascota("Mauricio","Perro","Golden",5.9,mauricio);
+        var mascot = new Mascota("Mauricio","Perro","Pastor Aleman",5.9,mauricio);
         
-        var atencionnum1=new Atencion("Pedro", 50,mascot);
-        atencionnum1.recetas("Finalin",6,"5 cada 4 horas");
-        atencionnum1.recetas("Aspirina",8,"1 cada 21 horas");
-        atencionnum1.recetas("Ratilin",21,"5 cada 47 horas");
-        atencionnum1.recetas("Frizer",19,"2 cada 12 horas");
-        atencionnum1.recetas("Procan",4,"13 cada 53 horas");
+        var atencionnum1=new Atencion("Juan", 20,mascot);
+        atencionnum1.recetas("Finalin",10,"1 cada 6 horas");
+        atencionnum1.recetas("Aspirina",5,"5 cada 2 horas");
+        atencionnum1.recetas("Finalin2",3,"3 cada 24 horas");
+        atencionnum1.recetas("Sinovac",8,"1 cada 34 horas");
+        atencionnum1.recetas("Fiazer",9,"2 cada 80 horas");
         
        System.out.println(atencionnum1.toString()+"\n");
        System.out.println(mauricio.toString());
+    
+    var juanito = new Estudiante("Juan ","0106121351");
+    var pedrito= new Estudiante("Pedro","0106981543");
+    var asignature = new Aignatura("Lenguaje","64 ciclos");
+    asignature.listestudiante(Juan);
+     asignature.listestudiante(Pedro);
+     System.out.println(asignature.toString());
     }
+    
 }

@@ -16,7 +16,7 @@ public class Carrera {
     
     private String nombre;
     private int numeroCiclo;
-    private ArrayList<Estudiante> estudianteList;
+    private final ArrayList<Estudiante> estudianteList;
 
     
     
