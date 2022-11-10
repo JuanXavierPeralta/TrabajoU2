@@ -10,11 +10,16 @@ package com.mycompany.trabajou2.modelo;
  */
 public class Telefono {
     
+    
+    
+    
     private String numero;
     private int extension;
     private String tipoTelefono;
     private String operadora;
 
+    
+    
     public Telefono(String numero, int extension, String tipoTelefono, String operadora) {
         this.numero = numero;
         this.extension = extension;
@@ -22,6 +27,8 @@ public class Telefono {
         this.operadora = operadora;
     }
 
+    
+    
     public String getNumero() {
         return numero;
     }
@@ -30,10 +37,14 @@ public class Telefono {
         this.numero = numero;
     }
 
+    
+    
     public int getExtension() {
         return extension;
     }
 
+    
+    
     public void setExtension(int extension) {
         this.extension = extension;
     }
@@ -42,18 +53,26 @@ public class Telefono {
         return tipoTelefono;
     }
 
+    
+    
     public void setTipoTelefono(String tipoTelefono) {
         this.tipoTelefono = tipoTelefono;
     }
 
+    
+    
     public String getOperadora() {
         return operadora;
     }
 
+    
+    
     public void setOperadora(String operadora) {
         this.operadora = operadora;
     }
 
+    
+    
     @Override
     public String toString() {
         return "Telefono{" + "numero=" + numero 

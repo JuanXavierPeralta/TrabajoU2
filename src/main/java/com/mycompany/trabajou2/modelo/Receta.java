@@ -10,44 +10,60 @@ package com.mycompany.trabajou2.modelo;
  */
 public class Receta {
     
+    
+    
     private String medicamento;
     private int cantidad;
-    private String indicaciones;
+    private String indicacion;
 
-    public Receta(String medicamento, int cantidad, String indicaciones) {
+    
+    
+    public Receta(String medicamento, int cantidad, String indicacion) {
         this.medicamento = medicamento;
         this.cantidad = cantidad;
-        this.indicaciones = indicaciones;
+        this.indicacion = indicacion;
     }
 
+    
+    
     public String getMedicamento() {
         return medicamento;
     }
 
-    public int getCantidad() {
-        return cantidad;
-    }
-
-    public String getIndicaciones() {
-        return indicaciones;
-    }
-
+    
+    
     public void setMedicamento(String medicamento) {
         this.medicamento = medicamento;
+    }
+
+    
+    
+    public int getCantidad() {
+        return cantidad;
     }
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 
-    public void setIndicaciones(String indicaciones) {
-        this.indicaciones = indicaciones;
+    
+    
+    public String getIndicacion() {
+        return indicacion;
     }
 
+    
+    
+    public void setIndicacion(String indicacion) {
+        this.indicacion = indicacion;
+    }
+
+    
+    
     @Override
     public String toString() {
         return "Receta{" + "medicamento=" + medicamento 
                 + ", cantidad=" + cantidad 
-                + ", indicaciones=" + indicaciones + '}';
+                + ", indicacion=" + indicacion + '}';
     }
 }

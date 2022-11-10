@@ -4,7 +4,7 @@
  */
 package com.mycompany.trabajou2.modelo;
 
-import java.time.LocalDate;
+import java.util.ArrayList;
 
 /**
  *
@@ -12,87 +12,75 @@ import java.time.LocalDate;
  */
 public class Atencion {
     
-    private LocalDate fecha;
-    private String veterinario;
-    private double costo;
-    private Mascota mascota;
-    private int cantidadRecetas;
-    private Receta[] recetaList;
+    
+  private String Veterinario;
+  private double costo;
+  private Mascota mascota;
+  private ArrayList<Receta> receta;
 
-    public Atencion(LocalDate fecha, String veterinario, double costo, Mascota mascota, int cantidadRecetas) {
-        this.fecha = fecha;
-        this.veterinario = veterinario;
+  
+  
+    public Atencion(String Veterinario, double costo, Mascota mascota) {
+        this.Veterinario = Veterinario;
         this.costo = costo;
         this.mascota = mascota;
-        this.cantidadRecetas = cantidadRecetas;
-        this.recetaList = new Receta[this.cantidadRecetas];
+        this.receta = new ArrayList<>();
+    }
+    
+    
+    public void recetas(String medicamento, int cantidad, String indicacion){
+    var recetas=new Receta(medicamento,cantidad,indicacion);
+    this.receta.add(recetas);
     }
 
-     public void nuevaReceta(String medicamentos,int cantidad,String indicaciones, int posicion){
-         var receta = new Receta(medicamentos,cantidad,indicaciones);
-         this.recetaList[posicion]=receta;
-         System.out.println("\n");
-     }
-     
+    
 
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
-
-    public void setVeterinario(String veterinario) {
-        this.veterinario = veterinario;
-    }
-
-    public void setCosto(double costo) {
-        this.costo = costo;
-    }
-
-    public void setMascota(Mascota mascota) {
-        this.mascota = mascota;
-    }
-
-    public void setCantidadRecetas(int cantidadRecetas) {
-        this.cantidadRecetas = cantidadRecetas;
-    }
-
-    public void setRecetaList(Receta[] recetaList) {
-        this.recetaList = recetaList;
-    }
-
-    public LocalDate getFecha() {
-        return fecha;
-    }
+  
 
     public String getVeterinario() {
-        return veterinario;
+        return Veterinario;
     }
 
+    
+    
+    public void setVeterinario(String Veterinario) {
+        this.Veterinario = Veterinario;
+    }
+
+    
+    
     public double getCosto() {
         return costo;
     }
 
+    
+    
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
+
+    
+    
     public Mascota getMascota() {
         return mascota;
     }
 
-    public int getCantidadRecetas() {
-        return cantidadRecetas;
+    
+    
+    public void setMascota(Mascota mascota) {
+        this.mascota = mascota;
     }
-
-    public Receta[] getRecetaList() {
-        return recetaList;
+    
+    
+    
+  @Override
+           public String toString() {
+        var retorno= "Atencion{" + "Veterinario=" + Veterinario 
+                + ", costo=" + costo 
+                + ", mascota=" + mascota +"\n";
+        for(var receta = this.receta){
+            retorno+=receta.toString()+"\n";
     }
-
-    @Override
-    public String toString() {
-        var retorno= "Atencion{" + "fecha=" + fecha + ", "
-            + "veterinario=" + veterinario 
-            + ", costo=" + costo 
-            + ", mascota=" +mascota   +'}'+"\n";
-        
-        for (var i =0;i<this.cantidadRecetas;i++){
-            retorno+=this.recetaList[i].toString()+"\n";
-        }
         return retorno;
-    }
+}
 }
